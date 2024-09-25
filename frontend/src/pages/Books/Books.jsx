@@ -24,7 +24,7 @@ const Books = () => {
 						{book.cover && <img src={book.cover} alt='kitap kapağı' />}
 						<h2>{book.title}</h2>
 						<p>{book.desc}</p>
-						<span>{book.price}</span>
+						<span>price: {book.price}</span>
 					</div>
 				))}
 			</div>
