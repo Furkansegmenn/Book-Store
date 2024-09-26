@@ -34,6 +34,14 @@ app.post("/books", (req, res) => {
 	});
 });
 
+app.delete("/books/:id", (req, res) => {
+	const bookId = req.params.id;
+	const q = "DELETE FROM books WHERE id = ?";
+	db.query(q, [bookId], (err, data) => {
+		return res.json("Book has been deleted succesfully");
+	});
+});
+
 app.listen(8080, () => {
 	console.log("Connected the backend server !!");
 });
