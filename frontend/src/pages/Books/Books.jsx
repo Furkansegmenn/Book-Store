@@ -60,11 +60,10 @@ const Books = () => {
 					</div>
 				))}
 			</div>
-			<button className='newbook'>
-				<Link to='/add' style={{ textDecoration: "none", color: "#fff" }}>
-					Add new Book
-				</Link>
-			</button>
+
+			<Link to='/add' style={{ textDecoration: "none", color: "#fff" }}>
+				<button className='newbook'>Add new book</button>
+			</Link>
 		</div>
 	);
 };

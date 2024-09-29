@@ -70,10 +70,12 @@
 	.newbook {
 		font-weight: bolder;
 		color: #fff;
-		padding: 7px;
+		padding: 10px;
 		border-radius: 4px;
 		cursor: pointer;
 		transition: transform 0.2s ease;
+		text-transform: uppercase;
+		border: none;
 
 		&:active {
 			transform: scale(0.95);
