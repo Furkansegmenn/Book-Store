@@ -3,9 +3,12 @@
 	padding: 0;
 	box-sizing: border-box;
 }
+
 body {
-	width: 100%;
-	height: 100vh;
 	background: linear-gradient(0.1turn, #000, #000, #220000);
 	color: #fff;
+	min-height: 100%; /* Sayfa yüksekliğinin tamamını kapsar */
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-attachment: fixed; /* Arka plan sabit kalır, sayfa kaydırılsa bile */
 }

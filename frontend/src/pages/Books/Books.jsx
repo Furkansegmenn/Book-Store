@@ -16,7 +16,7 @@ const Books = () => {
 			}
 		};
 		fetchAllBooks();
-	});
+	}, []);
 
 	const handleDelete = async (id) => {
 		try {
@@ -50,12 +50,9 @@ const Books = () => {
 							<button className='delete' onClick={() => handleDelete(book.id)}>
 								Delete
 							</button>
-
-							<button className='update'>
-								<Link to='/update/:id' style={{ textDecoration: "none", color: "#fff" }}>
-									Update
-								</Link>
-							</button>
+							<Link to={`update/${book.id}`} style={{ textDecoration: "none", color: "#fff" }}>
+								<button className='update'>Update</button>
+							</Link>
 						</div>
 					</div>
 				))}

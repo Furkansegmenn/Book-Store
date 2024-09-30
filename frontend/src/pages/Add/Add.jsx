@@ -18,7 +18,7 @@ const Add = () => {
 
 	const handleClick = async (e) => {
 		e.preventDefault();
-		if ((!book.title, !book.desc, !book.price, !book.cover)) {
+		if (!book.title || !book.desc || !book.price || !book.cover) {
 			alert("Please fill all fields");
 			return;
 		}
@@ -48,9 +48,9 @@ const Add = () => {
 			</Link>
 			<div className='mid-container'>
 				<h1 className='header'>Add New Book</h1>
-				<form className='form'>
+				<form className='form' method='POST' encType='multipart/form-data'>
 					<input type='text' placeholder='Title' onChange={handleChange} name='title' />
-					<input type='text' placeholder='Description' onChange={handleChange} name='desc' />
+					<input type='textbox' placeholder='Description' onChange={handleChange} name='desc' />
 					<input type='number' placeholder='Price' onChange={handleChange} name='price' />
 					<input type='text' placeholder='Cover' onChange={handleChange} name='cover' />
 					<button className='add-button' onClick={handleClick}>
